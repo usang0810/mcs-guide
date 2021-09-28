@@ -7,7 +7,7 @@
 ### API 서버 추가시 location 추가
 ```
 location /api/example {
-    rewrite     ^/api/(.*)$ /$1 break;
+    rewrite     ^/api(.*)$ $1 break;
     proxy_pass  http://localhost:80??;
 }
 ```
